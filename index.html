@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find the Pair</title>
+	<style>
+	table tr td {
+		border: 1px solid black;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<select onchange="insertTable(this)">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select>
+	<div id="container">
+		
+	</div>
+
+	<script>
+		function generateTable(number) {
+			let table = '<table>'
+
+			for(let i = 1; i <= number; i++) {
+				table += "<tr>"
+
+				for (let j = 1; j <= number; j++ ) {
+					table += "<td>" + j
+				}
+				
+				table += "</td>"
+			}
+
+			table += '</table>'
+
+			return table;
+		}
+		function insertTable(el) {
+        	//debugger
+        	number = parseInt( el[el.selectedIndex].value )
+        	document.getElementById('container').innerHTML = generateTable(number)
+        }
+        document.getElementById('container').innerHTML = generateTable(1)
+    </script>
+
+</body>
+</html>
