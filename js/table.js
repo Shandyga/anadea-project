@@ -5,7 +5,7 @@ function generateTable(number) {
 		table += "<tr>"
 
 		for (let j = 1; j <= number; j++ ) {
-			table += "<td>" + j
+			table += "<td class='show-image'>" + j
 		}
 
 		table += "</td>"
