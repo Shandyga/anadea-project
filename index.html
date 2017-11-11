@@ -17,35 +17,10 @@
 		<option>4</option>
 		<option>5</option>
 	</select>
-	<div id="container">
-		
-	</div>
+	
+	<div id="container"> /div>
 
-	<script>
-		function generateTable(number) {
-			let table = '<table>'
-
-			for(let i = 1; i <= number; i++) {
-				table += "<tr>"
-
-				for (let j = 1; j <= number; j++ ) {
-					table += "<td>" + j
-				}
-				
-				table += "</td>"
-			}
-
-			table += '</table>'
-
-			return table;
-		}
-		function insertTable(el) {
-        	//debugger
-        	number = parseInt( el[el.selectedIndex].value )
-        	document.getElementById('container').innerHTML = generateTable(number)
-        }
-        document.getElementById('container').innerHTML = generateTable(1)
-    </script>
-
+	<script type="text/javascript" src="js/table.js"></script>
+ 	<script>document.getElementById('container').innerHTML = generateTable(1)</script>
 </body>
 </html>
